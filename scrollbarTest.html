@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrollbarTest</title>
+    <style>
+        .scroll-wrap {
+            overflow: hidden;
+        }
+        .scroll {
+            width: 100%;
+            box-sizing: border-box;
+            background: #f5f5f5;
+            overflow: hidden;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 20px;
+            margin-bottom: -20px;
+        }
+        .scroll-content {
+            width: 200%;
+            white-space: nowrap;
+            font-size: 100px;
+            color: #333;
+            padding: 10px;
+        }
+        /* .scroll::-webkit-scrollbar {
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <div class="scroll-wrap">
+        <div class="scroll">
+            <div class="scroll-content">一行比较长的测试文字一行比较长的测试文字</div>
+        </div>
+    </div>
+</body>
+</html>
