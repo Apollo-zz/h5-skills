@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>filter / backdrop-filter 对比</title>
     <style>
+        h3 {
+            font-size: 14px;
+            margin: 10px 0 5px;
+        }
         .box {
             display: inline-block;
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 45%;
+            max-width: 300px;
+            height: 150px;
             overflow: hidden;
             font-family: "Pingfang SC";
             background-size: cover;
@@ -26,19 +31,24 @@
             height: 100%;
         }
 
-        img,video {
+        img {
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .box-blur img {
+        .filter {
             -webkit-filter: blur(4px);
             filter: blur(4px);
             position: relative;
+            
+        }
+
+        .scale {
             transform: scale(1.05);
         }
+
 
         .blur {
             position: absolute;
@@ -52,29 +62,30 @@
             line-height: 50px;
         }
 
-        .blur-div {
+        .backdrop-filter {
+            height: 50%;
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
         }
     </style>
 </head>
 <body>
-    <h3>filter 对比</h3>
+    <h3>filter 效果</h3>
     <div class="box">
         <img src="https://qzonestyle.gtimg.cn/aoi/sola/20190815172213_XbjdgL1t5C.jpg" alt="">
     </div>
-    <div class="box box-blur">
-        <img src="https://qzonestyle.gtimg.cn/aoi/sola/20190815172213_XbjdgL1t5C.jpg" alt="">
+    <div class="box">
+        <img class="filter scale" src="https://qzonestyle.gtimg.cn/aoi/sola/20190815172213_XbjdgL1t5C.jpg" alt="">
     </div>
 
-    <h3>backdrop-filter 对比</h3>
+    <h3>backdrop-filter 效果</h3>
     <div class="box">
         <img src="https://qzonestyle.gtimg.cn/aoi/sola/20190815172213_XbjdgL1t5C.jpg" alt="">
         <div class="blur"></div>
     </div>
     <div class="box">
         <img src="https://qzonestyle.gtimg.cn/aoi/sola/20190815172213_XbjdgL1t5C.jpg" alt="">
-        <div class="blur blur-div"></div>
+        <div class="blur backdrop-filter"></div>
     </div>
 </body>
 </html>
