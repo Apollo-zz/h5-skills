@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cursor</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            user-select: none;
+        }
+        .default {
+            cursor: default;
+        }
+        .text {
+            cursor: text;
+        }
+        .pointer {
+            cursor: pointer;
+        }
+        .not-allowed {
+            cursor: not-allowed;
+        }
+        .move {
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div class="box default">default</div>
+    <div class="box text">text</div>
+    <div class="box pointer">pointer</div>
+    <div class="box not-allowed">not-allowed</div>
+    <div class="box move">move</div>
+</body>
+</html>
