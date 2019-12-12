@@ -6,19 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>callout</title>
     <style>
+        h3 {
+            font-size: 14px;
+        }
         img {
             width: 300px;
             height: 300px;
-            pointer-events: none;
         }
         a, img {
             display: block;
-            /* -webkit-touch-callout:none; */
+        }
+        .callout {
+             -webkit-touch-callout: none;
+        }
+        .pointer-none {
+            pointer-events: noen;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background: url("https://qzonestyle.gtimg.cn/aoi/sola/20190905145951_UV3hlY4VLK.jpeg") no-repeat;
+            background-size: 100% 100%;
         }
     </style>
 </head>
 <body>
-    <a href="www.apollozz.com">试试长按会不会弹出</a>
-    <img src="https://qzonestyle.gtimg.cn/aoi/sola/20190905145951_UV3hlY4VLK.jpeg" alt="">
+    <a href="https://www.apollozz.com/">长按会弹出的链接</a>
+    <a class="callout" href="https://www.apollozz.com/">长按不会弹出的链接</a>
+    <h3>我是一个 img</h3>
+    <img class="callout" src="https://qzonestyle.gtimg.cn/aoi/sola/20190905145951_UV3hlY4VLK.jpeg" alt="">
+    <h3>我是一个 pointer-event: none 的 img</h3>
+    <img class="callout pointer-none" src="https://qzonestyle.gtimg.cn/aoi/sola/20190905145951_UV3hlY4VLK.jpeg" alt="">
+    <h3>我是一个 background-image</h3>
+    <div class="box"></div>
 </body>
 </html>
