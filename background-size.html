@@ -95,11 +95,25 @@
             background: url("https://qzonestyle.gtimg.cn/aoi/sola/20191028200010_Rdy19zHUK5.png") center / cover content-box content-box;
         }
         .img {
-            display: inline-block;
-            margin: 20px;
+            display: block;
             width: 100px;
             height: 100px;
             border: 1px solid #000;
+        }
+        .object-fit-box {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+        .object-fit-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+            text-shadow: 0 0 10px #000;
         }
     </style>
 </head>
@@ -194,6 +208,9 @@
         <div class="bg bg-1 bg-cover" style="background-origin: content-box; background-clip: content-box;">
             <span>content-box</span>
         </div>
+        <div style="margin: 20px;width: 120px;background: linear-gradient(90deg, #ff4e84 0%, #b93bf3 100%);background-clip: text;-webkit-background-clip: text;color: transparent;">
+            我是一段文字
+        </div>
     </div>
     <div style="background-color: #eee;">
         <div class="avatar-3">
@@ -203,13 +220,37 @@
         <div class="bg bg-1" style="background-color: #fff; background-origin: content-box;background-clip: content-box;border-radius: 50%; border-style: solid;background-image: url(https://qzonestyle.gtimg.cn/aoi/sola/20191028200010_Rdy19zHUK5.png);">
         </div>
     </div>
-    <div>
-        <img class="img" style="object-fit: cover;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
-        <img class="img" style="object-fit: contain;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
-        <img class="img" style="object-fit: fill;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
-        <img class="img" style="object-fit: none;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
-        <img class="img" style="object-fit: scale-down;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
-        <img class="img" style="object-fit: scale-down;" src="https://qzonestyle.gtimg.cn/aoi/sola/20191113173450_vkqTK0jLQt.png" alt="">
-    </div>
+    <section>
+        <h3>object-fit</h3>
+        <div class="object-fit-box">
+            <img class="img" style="" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">无</span>
+        </div>
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: fill;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">fill</span>
+        </div>
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: cover;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">cover</span>
+        </div>
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: contain;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">contain</span>
+        </div>
+        
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: none;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">none</span>
+        </div>
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: scale-down;" src="https://qzonestyle.gtimg.cn/aoi/sola/20190820170814_87WwqTUXAc.png" alt="">
+            <span class="object-fit-text">scale-down</span>
+        </div>
+        <div class="object-fit-box">
+            <img class="img" style="object-fit: scale-down;" src="https://qzonestyle.gtimg.cn/aoi/sola/20191113173450_vkqTK0jLQt.png" alt="">
+            <span class="object-fit-text">scale-down</span>
+        </div>
+    </section>
 </body>
 </html>
