@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mask-image</title>
+    <style>
+        p {
+            margin: 0;
+            padding: 10px;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 15px;
+            height: 15px; 
+            background-color: currentColor; /* 控制图标的颜色 - 默认当前color值 */
+            -webkit-mask: url(https://qzonestyle.gtimg.cn/aoi/sola/20190828142257_K7VyDB0imd.png) 0 0 no-repeat;
+            -webkit-mask-size: 100% 100%;
+        }
+
+        .red {
+            color: red;
+        }
+        .yellow {
+            color: yellow;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+        <p>这个是黑色icon<span class="icon"></span></p>
+        <p class="red">这个是红色icon<span class="icon"></span></p>
+        <p class="yellow">这个是黄色icon<span class="icon"></span></p>
+        <p class="blue">这个是蓝色icon<span class="icon"></span></p>
+</body>
+</html>
